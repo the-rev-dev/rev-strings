@@ -16,7 +16,7 @@ export class rStrings {
             .map(w => w.toLowerCase())
             .join('_');
     }
-    static toQueryString(url: string, query: Record<string, string>): string {
+    static toQueryString(query: Record<string, string>, url = ''): string {
         Object.keys(query)
             .forEach(k =>
                 url = this.setQueryParam(url, k, query[k])

@@ -13,7 +13,7 @@ The `rev-strings` package is a library to facilitate string composition and inte
   - [Table of Contents](#table-of-contents)
 - [Getting Started](#getting-started)
   - [Install](#install)
-  - [Usage](#usage)
+- [Usage Example](#usage-example)
 
 # Getting Started
 
@@ -22,4 +22,16 @@ The `rev-strings` package is a library to facilitate string composition and inte
 $ npm install rev-strings
 ```
 
-## Usage
+# Usage Example
+
+Suppose we have a UI that needs to append an object as a query string.
+
+```typescript
+import { rStrings } from 'rev-strings';
+
+const query = { userId: 12 };
+const result = rStrings.toQueryString(query);
+
+// result = "?userId=12"
+```
+
