@@ -1,18 +1,9 @@
 import { regex } from './regexPatterns';
 
-const setQueryParam = (uri: string, key: string, value: string) => {
-    var re = new RegExp("([?&])" + key + "=.*?(&|$)", "i");
-    var separator = uri.indexOf('?') !== -1 ? "&" : "?";
-    if (uri.match(re)) {
-        return uri.replace(re, '$1' + key + "=" + value + '$2');
-    }
-    else {
-        return uri + separator + key + "=" + value;
-    }
-}
 
 
-export class ParseString {
+
+export class rStrings {
 
     static toLowerCase(val: string) {
         return val.toLowerCase();
@@ -28,15 +19,25 @@ export class ParseString {
     static toQueryString(url: string, query: Record<string, string>): string {
         Object.keys(query)
             .forEach(k =>
-                url = setQueryParam(url, k, query[k])
+                url = this.setQueryParam(url, k, query[k])
             );
         // change to use reduce
         return url;
     }
+    static setQueryParam = (uri: string, key: string, value: string) => {
+        var re = new RegExp("([?&])" + key + "=.*?(&|$)", "i");
+        var separator = uri.indexOf('?') !== -1 ? "&" : "?";
+        if (uri.match(re)) {
+            return uri.replace(re, '$1' + key + "=" + value + '$2');
+        }
+        else {
+            return uri + separator + key + "=" + value;
+        }
+    }
 }
 
 
-export class StringBuilder extends ParseString {
+export class StringBuilder extends rStrings {
 
     constructor(private _value = "") {
         super();
