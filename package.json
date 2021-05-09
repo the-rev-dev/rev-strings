@@ -1,6 +1,6 @@
 {
   "name": "rev-strings",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "TypeScript library to facilitate string composition and interpretation",
   "author": "Timothy Ernst",
   "license": "UNLICENSED",
