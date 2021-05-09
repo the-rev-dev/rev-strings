@@ -1,6 +1,6 @@
 # Overview
 
-The `rev-strings` package is a library to facilitate the string composition and interpretation. 
+The `rev-strings` package is a library to facilitate string composition and interpretation. 
 
 ## Capabilities
 
