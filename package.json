@@ -10,7 +10,11 @@
   "main": "./build/index.js",
   "types": "./build/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "clean:npm": "shx rm -rf node_modules",
+    "clean:build": "shx rm -rf build",
+    "clean": "npm run clean:build && npm run clean:npm"
   },
   "repository": {
     "type": "git",
