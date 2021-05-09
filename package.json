@@ -1,7 +1,7 @@
 {
   "name": "rev-strings",
   "version": "0.0.3",
-  "description": "Generic typescript string parsing utility.",
+  "description": "TypeScript library to facilitate the string composition and interpretation",
   "author": "Timothy Ernst",
   "license": "UNLICENSED",
   "files": [
