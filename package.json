@@ -1,5 +1,5 @@
 {
-  "name": "rev-string-parser",
+  "name": "rev-strings",
   "version": "0.0.1",
   "description": "Generic typescript string parsing utility.",
   "author": "Timothy Ernst",
